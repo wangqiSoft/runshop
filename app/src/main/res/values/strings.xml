@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">快跑</string>
+    <string name="skip"><![CDATA[跳过介绍>>]]></string>
+</resources>
