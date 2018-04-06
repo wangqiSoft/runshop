@@ -32,6 +32,5 @@
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="70dp"
         android:background="@null"
-        android:src="@mipmap/guide_enter"
         android:visibility="gone"/>
 </RelativeLayout>

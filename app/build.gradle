@@ -72,12 +72,12 @@ dependencies {
     implementation 'com.github.GrenderG:Toasty:1.2.8'
     implementation 'com.jakewharton:butterknife:8.8.1'
     annotationProcessor 'com.jakewharton:butterknife-compiler:8.8.1'
-    compile 'org.greenrobot:eventbus:3.1.1'
-    compile "com.flyco.systembar:FlycoSystemBar_Lib:1.0.0@aar"
+    implementation 'org.greenrobot:eventbus:3.1.1'
+    implementation "com.flyco.systembar:FlycoSystemBar_Lib:1.0.0@aar"
     implementation 'com.github.bumptech.glide:glide:4.6.1'
     annotationProcessor 'com.github.bumptech.glide:compiler:4.6.1'
     //Tablayout
-    compile 'com.github.wangqiSoft:SmartTabLayout:v1.0.1'
+    implementation 'com.github.wangqiSoft:SmartTabLayout:v1.0.2'
     //imageSlider
-    compile 'com.github.wangqiSoft:AndroidSmartImageSlider:v1.0.1'
+    implementation 'com.github.wangqiSoft:AndroidSmartImageSlider:v1.0.2'
 }
