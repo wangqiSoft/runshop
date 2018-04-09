@@ -1,4 +1,4 @@
-package com.runshoptechnology.runshop.wedgit;
+package com.runshoptechnology.runshop.widget;
 
 import android.content.Context;
 import android.content.res.TypedArray;

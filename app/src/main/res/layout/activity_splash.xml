@@ -14,7 +14,7 @@
         android:src="@mipmap/splash_bg"
         android:scaleType="fitXY" />
 
-    <com.runshoptechnology.runshop.wedgit.CountDownView
+    <com.runshoptechnology.runshop.widget.CountDownView
         android:id="@+id/cdv"
         android:layout_width="40dp"
         android:layout_height="40dp"

@@ -6,12 +6,8 @@ import android.widget.ImageView;
 
 import com.runshoptechnology.runshop.R;
 import com.runshoptechnology.runshop.base.BaseActivity;
-import com.runshoptechnology.runshop.config.PreferencesConfig;
-import com.runshoptechnology.runshop.utils.PreferencesUtils;
 import com.runshoptechnology.runshop.utils.StartActivityUtil;
-import com.runshoptechnology.runshop.wedgit.CountDownView;
-
-import java.lang.annotation.ElementType;
+import com.runshoptechnology.runshop.widget.CountDownView;
 
 import butterknife.BindView;
 import butterknife.OnClick;
@@ -66,11 +62,11 @@ public class SplashActivity extends BaseActivity implements CountDownView.CountD
     @Override
     public void onFinishCount() {
         //是否显示了引导页
-        if (PreferencesUtils.getBoolean(this, PreferencesConfig.GuiActivityShow)) {
+//        if (PreferencesUtils.getBoolean(this, PreferencesConfig.GuiActivityShow)) {
             StartActivityUtil.GoMainActivity(this, new Bundle());
-        } else {
-            StartActivityUtil.GoGuideActivity(this,new Bundle());
-        }
+//        } else {
+//            StartActivityUtil.GoGuideActivity(this,new Bundle());
+//        }
 
     }
 }

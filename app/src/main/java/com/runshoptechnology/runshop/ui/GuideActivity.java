@@ -30,6 +30,7 @@ public class GuideActivity extends BaseActivity {
     @Override
     protected void initView() {
         super.initView();
+        //设置引导页完成
         PreferencesUtils.putBoolean(this, PreferencesConfig.GuiActivityShow,true);
     }
 }

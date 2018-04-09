@@ -1,0 +1,43 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+
+    <!--topbar 右边文字背景-->
+    <dimen name="topbar_button_width">43.3dp</dimen>
+    <!--topbar 右边文字背景高度-->
+    <dimen name="topbar_button_height">22dp</dimen>
+
+
+    <dimen name="text_size_18">18sp</dimen>
+    <dimen name="text_size_17">17sp</dimen>
+    <dimen name="text_size_16">16sp</dimen>
+    <dimen name="text_size_15">15sp</dimen>
+    <dimen name="text_size_14">14sp</dimen>
+    <dimen name="text_size_13">13sp</dimen>
+    <dimen name="text_size_12">12sp</dimen>
+    <dimen name="text_size_11">11sp</dimen>
+    <dimen name="text_size_10">10sp</dimen>
+
+    <!--nav bar title 完成半月保输入文字-->
+    <dimen name="nav_title">14sp</dimen>
+    <!--item 右上角字体大小-->
+    <dimen name="item_plan_maintain">12.3sp</dimen>
+    <!--topbar 右边按钮大小-->
+    <dimen name="topbar_right_button_title">12.3sp</dimen>
+    <!--所有页面左边距16dp -->
+    <dimen name="margin_left">15dp</dimen>
+    <!--所有页面距离右边距16dp-->
+    <dimen name="margin_right">15dp</dimen>
+    <dimen name="dialog_width">241dp</dimen>
+
+    <dimen name="margin_top">105dp</dimen>
+    <dimen name="margin_top1">90dp</dimen>
+    <dimen name="margin_gap_12">12dp</dimen>
+
+    <dimen name="side_letter_bar_letter_size">12sp</dimen>
+    <dimen name="side_letter_bar_width">36dp</dimen>
+    <dimen name="city_text_size">16sp</dimen>
+    <dimen name="statusbar_view_height">0dp</dimen>
+    <dimen name="sub_action_button">10dp</dimen>
+</resources>
