@@ -71,16 +71,16 @@ public class LoginActivity extends BaseActivity<LoginContract.loginPresenter>  i
 
     @Override
     public void showProgress() {
-
+        showProgressDialog("");
     }
 
     @Override
     public void hideProgress() {
-
+        closeProgressDialog();
     }
 
     @OnClick(R.id.login_btn)
     public void onClick(){
-        mPresenter.login(new RequestBean(),false );
+//        mPresenter.login(new RequestBean(),false );
     }
 }

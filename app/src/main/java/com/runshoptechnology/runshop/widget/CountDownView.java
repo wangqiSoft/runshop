@@ -16,10 +16,10 @@ import com.runshoptechnology.runshop.R;
 
 
 /**
-* @author Ryder
-* create at 2018/4/6 11:52
-* description: 启动页出现的那个跳过按钮
-**/
+ * @author Ryder
+ * create at 2018/4/6 11:52
+ * description: 启动页出现的那个跳过按钮
+ **/
 
 public class CountDownView extends View {
 
@@ -46,7 +46,7 @@ public class CountDownView extends View {
 
     private float progress = 0;
     private StaticLayout staticLayout;
-
+    private CountDownTimer countDownTimer;
     private CountDownTimerListener listener;
 
     public CountDownView(Context context) {
@@ -137,10 +137,10 @@ public class CountDownView extends View {
         if (listener != null) {
             listener.onStartCount();
         }
-        new CountDownTimer(countDownTime, 40) {
+        countDownTimer = new CountDownTimer(countDownTime, 40) {
             @Override
             public void onTick(long millisUntilFinished) {
-                progress = ((countDownTime - millisUntilFinished) / (float)countDownTime) * 360;
+                progress = ((countDownTime - millisUntilFinished) / (float) countDownTime) * 360;
 //                Log.d(TAG, "progress:" + progress);
                 invalidate();
             }
@@ -154,6 +154,13 @@ public class CountDownView extends View {
                 }
             }
         }.start();
+    }
+
+    public void onCancle() {
+        if (null != countDownTimer){
+            countDownTimer.cancel();
+            listener = null;
+        }
     }
 
     public void setCountDownTimerListener(CountDownTimerListener listener) {

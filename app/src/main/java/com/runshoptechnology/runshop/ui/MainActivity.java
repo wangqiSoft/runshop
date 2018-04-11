@@ -127,9 +127,9 @@ public class MainActivity extends BaseActivity {
 
     @Override
     public boolean onKeyDown(int keyCode, KeyEvent event) {
-        if (keyCode == KeyEvent.KEYCODE_BACK && event.getAction() == KeyEvent.ACTION_DOWN) {
+        if (keyCode == KeyEvent.KEYCODE_BACK ) {
             if (System.currentTimeMillis() - exitTime > 2000) {
-                Toasty.info(MainActivity.this, getResources().getString(R.string.sys_exit_tips));
+                Toasty.success(this, getResources().getString(R.string.sys_exit_tips)).show();
                 exitTime = System.currentTimeMillis();
             } else {
                 ActivityManager.getInstance().finishAllActivity();

@@ -1,6 +1,7 @@
 package com.runshoptechnology.runshop.base;
 
 import android.app.Activity;
+import android.app.ProgressDialog;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -22,6 +23,7 @@ import butterknife.ButterKnife;
  **/
 public abstract class BaseActivity <P extends BasePresenter > extends AppCompatActivity {
     protected P mPresenter;
+    private ProgressDialog progressDialog;
 
     protected abstract P generatePresenter();
     @Override
@@ -54,4 +56,28 @@ public abstract class BaseActivity <P extends BasePresenter > extends AppCompatA
     protected void initView() {
 
     }
+    /**
+     * 显示提示框
+     */
+    public void showProgressDialog(String msg) {
+        if ((!isFinishing()) && (progressDialog == null)) {
+            progressDialog = new ProgressDialog(this);
+        }
+        if (msg == null || "".equals(msg)) {
+            msg = "加载中……";
+        }
+        this.progressDialog.setMessage(msg);
+        //this.progressDialog.setCancelable(false);
+        this.progressDialog.setCanceledOnTouchOutside(false);
+        this.progressDialog.show();
+    }
+
+    /**
+     * 关闭提示框
+     */
+    public void closeProgressDialog() {
+        if (progressDialog != null && progressDialog.isShowing())
+            progressDialog.dismiss();
+    }
+
 }

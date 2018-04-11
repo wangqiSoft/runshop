@@ -40,6 +40,7 @@ public class SplashActivity extends BaseActivity implements CountDownView.CountD
         Toasty.warning(this, "测试警告信息").show();
         countDownView.setCountDownTimerListener(this);
         countDownView.start();
+
     }
 
     @Override
@@ -56,6 +57,7 @@ public class SplashActivity extends BaseActivity implements CountDownView.CountD
     public void onClick() {
         //是否显示了引导页
 //        if (PreferencesUtils.getBoolean(this, PreferencesConfig.GuiActivityShow)) {
+        countDownView.onCancle();
         StartActivityUtil.GoMainActivity(this, new Bundle());
 //        } else {
 //            StartActivityUtil.GoGuideActivity(this,new Bundle());
