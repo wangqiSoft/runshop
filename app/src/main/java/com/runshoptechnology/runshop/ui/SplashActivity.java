@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
 
+import com.flyco.systembar.SystemBarHelper;
 import com.runshoptechnology.runshop.R;
 import com.runshoptechnology.runshop.base.BaseActivity;
 import com.runshoptechnology.runshop.base.BasePresenter;
@@ -34,6 +35,7 @@ public class SplashActivity extends BaseActivity implements CountDownView.CountD
     @Override
     protected void initView() {
         super.initView();
+        SystemBarHelper.immersiveStatusBar(this);//设置全屏
         Toasty.error(this, "测试错误信息").show();
         Toasty.info(this, "测试正常信息").show();
         Toasty.success(this, "测试成功信息").show();

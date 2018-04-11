@@ -18,7 +18,7 @@ import retrofit2.http.POST;
 public interface ApiService {
 
     //登录
-    @POST("m/login")
+    @POST("auth/login")
     Flowable<ResponseData<UserBean>> Login(@Body RequestBean body);
 
 }

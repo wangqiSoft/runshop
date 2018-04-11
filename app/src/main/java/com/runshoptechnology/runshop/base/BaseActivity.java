@@ -1,15 +1,12 @@
 package com.runshoptechnology.runshop.base;
 
-import android.app.Activity;
 import android.app.ProgressDialog;
-import android.os.Build;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
-import android.view.Window;
-import android.view.WindowManager;
 
+import com.blankj.utilcode.util.BarUtils;
 import com.flyco.systembar.SystemBarHelper;
 import com.runshoptechnology.runshop.R;
 import com.runshoptechnology.runshop.utils.ActivityManager;

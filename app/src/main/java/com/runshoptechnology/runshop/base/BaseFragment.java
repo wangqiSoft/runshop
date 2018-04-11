@@ -1,13 +1,13 @@
 package com.runshoptechnology.runshop.base;
 
 import android.os.Bundle;
-import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.blankj.utilcode.util.BarUtils;
 import com.flyco.systembar.SystemBarHelper;
 import com.runshoptechnology.runshop.R;
 
@@ -35,9 +35,10 @@ public class BaseFragment extends Fragment {
         super.onViewCreated(view, savedInstanceState);
         ButterKnife.bind(this, view);
         initView();
-        SystemBarHelper.tintStatusBar(getActivity(),getResources().getColor(R.color.mainTabColor));
+        SystemBarHelper.tintStatusBar(getActivity(), getResources().getColor(R.color.mainTabColor));
+//        SystemBarHelper.immersiveStatusBar(this);
 //        if (setTopView() != null) {
-//            SystemBarHelper.setPadding(getContext(), setTopView());
+//            SystemBarHelper.setHeightAndPadding(this, setTopView());
 //        }
     }
 

@@ -7,5 +7,5 @@ package com.runshoptechnology.runshop.config;
  * description: host地址配置
  **/
 public class BaseUrl {
-    public static String HOST = "http://www.jiankanghulu.com/";
+    public static String HOST = "http://112.124.22.238:8081/course_api/";
 }
