@@ -7,6 +7,7 @@ import android.os.Bundle;
 
 import com.runshoptechnology.runshop.ui.GuideActivity;
 import com.runshoptechnology.runshop.ui.MainActivity;
+import com.runshoptechnology.runshop.ui.me.LoginActivity;
 
 /**
  * @author Ryder
@@ -35,6 +36,18 @@ public class StartActivityUtil {
      */
     public static void GoGuideActivity(Context context, Bundle bundle) {
         Intent intent = new Intent(context,GuideActivity.class);
+        intent.putExtras(bundle);
+        context.startActivity(intent);
+    }
+
+    /**
+     * 跳转登录页面
+     *
+     * @param context
+     * @param bundle
+     */
+    public static void GoLoginActivity(Context context, Bundle bundle) {
+        Intent intent = new Intent(context,LoginActivity.class);
         intent.putExtras(bundle);
         context.startActivity(intent);
     }

@@ -6,6 +6,7 @@ import android.widget.ImageView;
 
 import com.runshoptechnology.runshop.R;
 import com.runshoptechnology.runshop.base.BaseActivity;
+import com.runshoptechnology.runshop.base.BasePresenter;
 import com.runshoptechnology.runshop.utils.StartActivityUtil;
 import com.runshoptechnology.runshop.widget.CountDownView;
 
@@ -42,12 +43,23 @@ public class SplashActivity extends BaseActivity implements CountDownView.CountD
     }
 
     @Override
+    protected BasePresenter generatePresenter() {
+        return null;
+    }
+
+    @Override
     protected View setTopView() {
         return super.setTopView();
     }
 
     @OnClick(R.id.cdv)
     public void onClick() {
+        //是否显示了引导页
+//        if (PreferencesUtils.getBoolean(this, PreferencesConfig.GuiActivityShow)) {
+        StartActivityUtil.GoMainActivity(this, new Bundle());
+//        } else {
+//            StartActivityUtil.GoGuideActivity(this,new Bundle());
+//        }
 
     }
 

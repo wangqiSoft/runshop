@@ -39,6 +39,9 @@ public class TopBar extends RelativeLayout {
     @BindView(R.id.right_txt)
     TextView rightTxt;
 
+    @BindView(R.id.toolbar_searchview)
+    TextView tvSearch;//搜索的框
+
     private Context context;
 
     public TopBar(Context context) {
@@ -64,6 +67,7 @@ public class TopBar extends RelativeLayout {
         LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         View view = inflater.inflate(R.layout.widget_topbar, this);
         ButterKnife.bind(this, view);
+        tvSearch.setVisibility(GONE);
     }
 
     /**
@@ -131,6 +135,7 @@ public class TopBar extends RelativeLayout {
         rightTxt.setVisibility(View.VISIBLE);
         rightTxt.setOnClickListener(listener);
     }
+
     /**
      * 设置右边按钮显示文本
      *
@@ -161,6 +166,7 @@ public class TopBar extends RelativeLayout {
         rightTxt.setTextColor(color);
         rightTxt.setVisibility(View.VISIBLE);
     }
+
     /**
      * 设置标题文本颜色
      *
@@ -173,5 +179,32 @@ public class TopBar extends RelativeLayout {
 
     public TextView getRightTxt() {
         return rightTxt;
+    }
+
+
+    /**
+     * 设置是否可以显示搜索框 如果搜索框出现，标题就隐藏，如果搜索框隐藏，标题就显示
+     *
+     * @param visiable
+     */
+    public void setSearchVisiable(boolean visiable) {
+        if (visiable) {
+            tvSearch.setVisibility(VISIBLE);
+            title.setVisibility(GONE);
+        } else {
+            tvSearch.setVisibility(GONE);
+            title.setVisibility(VISIBLE);
+        }
+    }
+
+    /**
+     * 设置搜索框的点击事件
+     *
+     * @param listener
+     */
+    public void setSearchListener(@NonNull OnClickListener listener) {
+        if (null != listener) {
+            tvSearch.setOnClickListener(listener);
+        }
     }
 }

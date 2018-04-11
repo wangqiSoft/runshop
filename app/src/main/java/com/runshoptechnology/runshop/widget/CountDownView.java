@@ -51,10 +51,12 @@ public class CountDownView extends View {
 
     public CountDownView(Context context) {
         this(context, null);
+        setLayerType(View.LAYER_TYPE_SOFTWARE, null);
     }
 
     public CountDownView(Context context, AttributeSet attrs) {
         super(context, attrs);
+        setLayerType(View.LAYER_TYPE_SOFTWARE, null);
         TypedArray ta = context.obtainStyledAttributes(attrs, R.styleable.CountDownView);
         backgroundColor = ta.getColor(R.styleable.CountDownView_background_color, BACKGROUND_COLOR);
         borderWidth = ta.getDimension(R.styleable.CountDownView_border_width, BORDER_WIDTH);

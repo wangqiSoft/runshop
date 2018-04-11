@@ -20,7 +20,10 @@ import butterknife.ButterKnife;
  * create at 2018/4/6 10:39
  * description:  activity 的基类
  **/
-public class BaseActivity extends AppCompatActivity {
+public abstract class BaseActivity <P extends BasePresenter > extends AppCompatActivity {
+    protected P mPresenter;
+
+    protected abstract P generatePresenter();
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -28,12 +31,15 @@ public class BaseActivity extends AppCompatActivity {
             setContentView(getlayoutContentView());
             ButterKnife.bind(this);
         }
+        mPresenter = generatePresenter();
         initView();
-        SystemBarHelper.immersiveStatusBar(this);
-        if (setTopView() != null) {
-            SystemBarHelper.setHeightAndPadding(this, setTopView());
-        }
+        SystemBarHelper.tintStatusBar(this, getResources().getColor(R.color.mainTabColor));
+//        SystemBarHelper.immersiveStatusBar(this);
+//        if (setTopView() != null) {
+//            SystemBarHelper.setHeightAndPadding(this, setTopView());
+//        }
         ActivityManager.getInstance().addActivity(this);
+
     }
 
 

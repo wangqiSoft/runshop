@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragment.HomeFragment">
+
+    <com.runshoptechnology.runshop.widget.TopBar
+        android:id="@+id/home_fragment_topbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"></com.runshoptechnology.runshop.widget.TopBar>
+<Button
+    android:id="@+id/btn_gologin"
+    android:layout_width="match_parent"
+    android:text="到登录界面"
+    android:layout_alignParentBottom="true"
+    android:layout_height="wrap_content" />
+</RelativeLayout>

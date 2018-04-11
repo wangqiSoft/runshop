@@ -5,6 +5,7 @@ import android.view.View;
 
 import com.runshoptechnology.runshop.R;
 import com.runshoptechnology.runshop.base.BaseActivity;
+import com.runshoptechnology.runshop.base.BasePresenter;
 import com.runshoptechnology.runshop.config.PreferencesConfig;
 import com.runshoptechnology.runshop.utils.PreferencesUtils;
 
@@ -20,6 +21,11 @@ public class GuideActivity extends BaseActivity {
     @Override
     protected int getlayoutContentView() {
         return R.layout.activity_guide;
+    }
+
+    @Override
+    protected BasePresenter generatePresenter() {
+        return null;
     }
 
     @Override
