@@ -19,6 +19,13 @@
     <dimen name="text_size_11">11sp</dimen>
     <dimen name="text_size_10">10sp</dimen>
 
+
+
+    <dimen name="dimens_5dp">5dp</dimen>
+    <dimen name="dimens_3dp">3dp</dimen>
+    <dimen name="dimens_10dp">10dp</dimen>
+    <dimen name="dimens_15dp">15dp</dimen>
+
     <!--nav bar title 完成半月保输入文字-->
     <dimen name="nav_title">14sp</dimen>
     <!--item 右上角字体大小-->

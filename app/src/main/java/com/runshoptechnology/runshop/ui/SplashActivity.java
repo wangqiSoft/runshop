@@ -36,10 +36,10 @@ public class SplashActivity extends BaseActivity implements CountDownView.CountD
     protected void initView() {
         super.initView();
         SystemBarHelper.immersiveStatusBar(this);//设置全屏
-        Toasty.error(this, "测试错误信息").show();
-        Toasty.info(this, "测试正常信息").show();
-        Toasty.success(this, "测试成功信息").show();
-        Toasty.warning(this, "测试警告信息").show();
+//        Toasty.error(this, "测试错误信息").show();
+//        Toasty.info(this, "测试正常信息").show();
+//        Toasty.success(this, "测试成功信息").show();
+//        Toasty.warning(this, "测试警告信息").show();
         countDownView.setCountDownTimerListener(this);
         countDownView.start();
 

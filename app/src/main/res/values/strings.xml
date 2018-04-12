@@ -9,5 +9,7 @@
     <string name="chart_name">购物车</string>
     <string name="me_name">我的</string>
     <string name="error_toast">获取数据失败，请您重新获取</string>
+    <string name="food_door">送餐上门</string>
+    <string name="snack">小吃零食</string>
 
 </resources>

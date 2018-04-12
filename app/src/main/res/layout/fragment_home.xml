@@ -27,99 +27,11 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
 
-        <LinearLayout
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/home_recy"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="@color/white"
-            android:orientation="vertical">
-            <!-- 轮播 -->
-            <RelativeLayout
-                android:id="@+id/rl_home_spectial_topic_root"
-                android:layout_width="match_parent"
-                android:layout_height="150dp">
+            android:layout_height="match_parent"></android.support.v7.widget.RecyclerView>
 
-                <com.wangqiSoft.smartimageslider.SliderLayout
-                    android:id="@+id/home_specital_topic_slider"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    custom:auto_cycle="true"
-                    custom:indicator_visibility="visible"
-                    custom:pager_animation="Accordion"
-                    custom:pager_animation_span="1100" />
-
-                <RelativeLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="35dp"
-                    android:layout_alignParentBottom="true"
-                    android:layout_alignParentLeft="true"
-                    android:layout_alignParentStart="true"
-                    android:alpha="0.4"
-                    android:background="@color/black_colors"
-                    android:gravity="center_vertical">
-
-                    <!-- 最新公告 -->
-                    <LinearLayout
-                        android:id="@+id/ll_home_latest_news_root"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_toLeftOf="@+id/home_specital_topic_slider_indicator"
-                        android:gravity="left|center"
-                        android:orientation="horizontal"
-                        android:paddingBottom="10dp"
-                        android:paddingLeft="10dp"
-                        android:paddingRight="10dp"
-                        android:paddingTop="10dp">
-
-                        <ImageView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginRight="7dp"
-                            android:src="@mipmap/home_notice" />
-
-                        <com.runshoptechnology.runshop.widget.MarqueeTextView
-                            android:id="@+id/main_notice_tv"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:ellipsize="marquee"
-                            android:gravity="left|center_vertical"
-                            android:marqueeRepeatLimit="marquee_forever"
-                            android:singleLine="true"
-                            android:textColor="@android:color/white"
-                            android:textSize="@dimen/text_size_12"
-                            tools:text="恭喜张同学饮料买一送一连续中八瓶" />
-
-                    </LinearLayout>
-
-                    <com.wangqiSoft.smartimageslider.Indicators.PagerIndicator
-                        android:id="@+id/home_specital_topic_slider_indicator"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_alignParentRight="true"
-                        android:layout_centerVertical="true"
-                        android:layout_gravity="center_vertical"
-                        android:layout_marginLeft="10dp"
-                        android:layout_marginRight="10dp"
-                        custom:selected_drawable="@mipmap/home_banner_select"
-                        custom:selected_height="7dp"
-                        custom:selected_padding_left="3dp"
-                        custom:selected_padding_right="3dp"
-                        custom:selected_width="7dp"
-                        custom:shape="oval"
-                        custom:unselected_drawable="@mipmap/home_banner_unselect"
-                        custom:unselected_height="7dp"
-                        custom:unselected_padding_left="3dp"
-                        custom:unselected_padding_right="3dp"
-                        custom:unselected_width="7dp" />
-
-                </RelativeLayout>
-
-            </RelativeLayout>
-
-            <android.support.v7.widget.RecyclerView
-                android:id="@+id/home_recy"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"></android.support.v7.widget.RecyclerView>
-        </LinearLayout>
     </com.scwang.smartrefresh.layout.SmartRefreshLayout>
 
 
