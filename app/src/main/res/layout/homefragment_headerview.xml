@@ -44,9 +44,10 @@
                 android:paddingTop="10dp">
 
                 <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="@dimen/dimens_15dp"
+                    android:layout_height="@dimen/dimens_15dp"
                     android:layout_marginRight="7dp"
+                    android:layout_gravity="center_vertical"
                     android:src="@mipmap/home_notice" />
 
                 <com.runshoptechnology.runshop.widget.MarqueeTextView

@@ -10,7 +10,6 @@ import android.util.Log;
 import com.blankj.utilcode.util.Utils;
 import com.mob.MobSDK;
 import com.orhanobut.logger.AndroidLogAdapter;
-import com.orhanobut.logger.FormatStrategy;
 import com.orhanobut.logger.Logger;
 import com.orhanobut.logger.PrettyFormatStrategy;
 import com.runshoptechnology.runshop.config.ApiContans;
@@ -50,11 +49,10 @@ public class Myapplication extends Application {
         Utils.init(this);
         //初始化崩溃收集
 //        if (!ApiContans.DEBUG) {
-            initCrash();
+//            initCrash();
 //        }
 
     }
-
     /**
      * 初始化 toast
      */

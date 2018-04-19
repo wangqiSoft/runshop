@@ -6,7 +6,6 @@ import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 
-import com.blankj.utilcode.util.BarUtils;
 import com.flyco.systembar.SystemBarHelper;
 import com.runshoptechnology.runshop.R;
 import com.runshoptechnology.runshop.utils.ActivityManager;
@@ -38,7 +37,6 @@ public abstract class BaseActivity <P extends BasePresenter > extends AppCompatA
 //            SystemBarHelper.setHeightAndPadding(this, setTopView());
 //        }
         ActivityManager.getInstance().addActivity(this);
-
     }
 
 

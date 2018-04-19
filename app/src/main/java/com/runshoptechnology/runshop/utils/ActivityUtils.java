@@ -1,21 +1,12 @@
 package com.runshoptechnology.runshop.utils;
 
-import android.app.Activity;
 import android.content.Context;
-import android.content.Intent;
-import android.content.pm.PackageInfo;
-import android.content.pm.PackageManager;
 import android.content.res.ColorStateList;
 import android.content.res.Resources;
-import android.graphics.Rect;
-import android.os.Bundle;
 import android.os.Environment;
 import android.support.annotation.ColorInt;
-import android.support.v7.widget.Toolbar;
-import android.telephony.TelephonyManager;
 import android.util.DisplayMetrics;
 import android.view.WindowManager;
-import android.view.inputmethod.InputMethodManager;
 
 
 import com.orhanobut.logger.Logger;
@@ -30,37 +21,6 @@ import okio.Buffer;
  */
 @SuppressWarnings("ALL")
 public class ActivityUtils {
-
-    // 收起软键盘
-    public static void closeSyskeyBroad(Activity activity) {
-        try {
-
-            if (activity != null && activity.getCurrentFocus() != null && activity.getCurrentFocus().getWindowToken() != null) {
-                ((InputMethodManager) activity.getSystemService(Context.INPUT_METHOD_SERVICE)).hideSoftInputFromWindow(activity.getCurrentFocus().getWindowToken(), InputMethodManager.HIDE_NOT_ALWAYS);
-            } else {
-                InputMethodManager m = (InputMethodManager) activity.getSystemService(Context.INPUT_METHOD_SERVICE);
-//                    m.toggleSoftInput(0, InputMethodManager.HIDE_IMPLICIT_ONLY);
-                m.hideSoftInputFromWindow(activity.getCurrentFocus().getWindowToken(), 0); //强制隐藏键盘
-            }
-
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-    }
-
-    //屏幕高度
-    public static int getTop(Activity activity) {
-        WindowManager windowManager = activity.getWindowManager();
-        int height = windowManager.getDefaultDisplay().getHeight();
-        return height;
-    }
-
-    //屏幕宽度
-    public static int getWidth(Activity activity) {
-        WindowManager windowManager = activity.getWindowManager();
-        int height = windowManager.getDefaultDisplay().getWidth();
-        return height;
-    }
 
     public static DisplayMetrics displayMetrics(Context context) {
         DisplayMetrics dm = new DisplayMetrics();
@@ -124,54 +84,6 @@ public class ActivityUtils {
         return toColorStateList(normalColor, pressedColor, pressedColor, normalColor);
     }
 
-    //toolbar高度
-    public static int getToolBarTop(Toolbar toolbar) {
-        return toolbar.getTop();
-    }
-
-
-    /**
-     * 获取应用程序名称
-     */
-    public static String getAppName(Context context) {
-        try {
-            PackageManager packageManager = context.getPackageManager();
-            PackageInfo packageInfo = packageManager.getPackageInfo(context.getPackageName(), 0);
-            int labelRes = packageInfo.applicationInfo.labelRes;
-            return context.getResources().getString(labelRes);
-        } catch (PackageManager.NameNotFoundException e) {
-            e.printStackTrace();
-        }
-        return null;
-    }
-
-    /**
-     * [获取应用程序版本名称信息]
-     *
-     * @param context
-     * @return 当前应用的版本名称
-     */
-    public static String getVersionName(Context context) {
-        try {
-            PackageManager packageManager = context.getPackageManager();
-            PackageInfo packageInfo = packageManager.getPackageInfo(
-                    context.getPackageName(), 0);
-            return packageInfo.versionName;
-
-        } catch (PackageManager.NameNotFoundException e) {
-            e.printStackTrace();
-        }
-        return null;
-    }
-
-
-    //状态栏高度
-    public static int getRectTop(Activity activity) {
-        Rect outRect = new Rect();
-        activity.getWindow().getDecorView().getWindowVisibleDisplayFrame(outRect);
-        int i = outRect.top;
-        return i;
-    }
 
     //获取图库路径
     public static File ImagePath() {
@@ -271,11 +183,5 @@ public class ActivityUtils {
         }
         return out.toString();
 
-    }
-
-    public static String getDeviceId(Context context) {
-        TelephonyManager tm = (TelephonyManager) context.getSystemService(Context.TELEPHONY_SERVICE);
-        String IMEI = tm.getDeviceId();
-        return IMEI;
     }
 }
